@@ -1,17 +1,19 @@
-@use 'sass:math';
+@use "sass:math";
 
 // Layout
 @mixin flex(
   $flow: row nowrap,
   $content: center,
   $a-items: center,
-  $a-content: center
+  $a-content: center,
+  $direction: row
 ) {
   display: flex;
   flex-flow: $flow;
   justify-content: $content;
   align-items: $a-items;
   align-content: $a-content;
+  flex-direction: $direction;
 }
 
 @mixin mw($width) {
