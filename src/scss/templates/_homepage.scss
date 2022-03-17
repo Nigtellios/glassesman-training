@@ -1,74 +1,55 @@
-/* colors
-#32a852
-#a2ddff
-#00721e
- */
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-}
-
 .main-header {
-  background-color: #ffffff;
-  display: flex;
-  height: 100px;
-  border-bottom: #32a852 solid 5px;
-  color: #00721e;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 250px;
-}
+  background-color: $white;
+  @include flex(row nowrap, flex-start);
+  border-bottom: rem(5) solid $green;
+  color: $accent;
 
-.main-heade-container {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
 
-.main-header-nav {
-  font-size: 30px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  gap: 50px;
-}
+  &__logo {
+    max-width: rem(40);
 
-.logo {
-  height: 100px;
-}
+    @media screen and (min-width: 992px) {
+      max-width: rem(100);
+    }
+  }
 
-.logo-h1 {
-  font-size: 100px;
+  &__logo-h1 {
+    font-size: rem(30);
+    padding-right: rem(25);
+
+    @media screen and (min-width: 992px) {
+      font-size: rem(100);
+      padding-right: rem(50);
+    }
+  }
 }
 
 a:link,
 a:visited,
 a:active {
-  color: #00721e;
+  color: $accent;
   text-decoration: none;
 }
 
 a:hover {
-  color: #004412;
+  color: $accent;
 }
 
 content {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  background-color: #004412;
+  background-color: $accent-dark;
 }
 
 article {
   width: 70%;
-  background-color: #ffffff;
-  height: 100vh;
+  background-color: $white;
   display: flex;
 }
 
@@ -81,7 +62,7 @@ article {
 }
 
 .product {
-  width: 200px;
+  width: rem(200);
 }
 
 .tile {
@@ -89,11 +70,9 @@ article {
   justify-content: space-evenly;
   flex-wrap: wrap;
   width: 100%;
-  /* border: #32a852 solid 2px;
-  border-radius: 20px; */
 }
 
 footer {
-  height: 5vh;
-  border-top: #32a852 solid 5px;
+  padding: rem(20);
+  border-top: rem(5) solid $green;
 }
