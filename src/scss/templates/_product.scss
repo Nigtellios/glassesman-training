@@ -1,0 +1,40 @@
+.product-page {
+  max-width: 70%;
+  width: 100%;
+  background-color: $white;
+  display: flex;
+  flex: 0 0 70%;
+
+  &__image {
+    padding: rem(20);
+    max-width: 50%;
+    flex: 0 0 50%;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+.description {
+  padding: rem(20);
+  max-width: 50%;
+  flex: 0 0 50%;
+
+  &__title {
+    font-size: rem(30);
+    padding-right: rem(25);
+    line-height: rem(40);
+
+    @media screen and (min-width: 992px) {
+      font-size: rem(60);
+      line-height: rem(82);
+    }
+  }
+  ul {
+    list-style: inside;
+  }
+  &__list {
+    padding-left: rem(5);
+  }
+}

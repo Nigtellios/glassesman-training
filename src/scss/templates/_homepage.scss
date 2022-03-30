@@ -1,99 +1,86 @@
-/* colors
-#32a852
-#a2ddff
-#00721e
- */
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-}
-
 .main-header {
-  background-color: #ffffff;
-  display: flex;
-  height: 100px;
-  border-bottom: #32a852 solid 5px;
-  color: #00721e;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 250px;
-}
+  background-color: $white;
+  @include flex(row nowrap, flex-start);
+  border-bottom: rem(5) solid $green;
+  color: $accent;
 
-.main-heade-container {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
+  &__container {
+    @include flex(row nowrap, center, flex-start);
+    padding-right: rem(50);
+  }
 
-.main-header-nav {
-  font-size: 30px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  gap: 50px;
-}
+  &__link:link {
+    @include flex;
+  }
 
-.logo {
-  height: 100px;
-}
+  &__logo {
+    max-width: rem(40);
 
-.logo-h1 {
-  font-size: 100px;
+    @media screen and (min-width: 992px) {
+      max-width: rem(100);
+    }
+  }
+
+  &__logo-h1 {
+    font-size: rem(30);
+    padding-right: rem(25);
+
+    @media screen and (min-width: 992px) {
+      font-size: rem(100);
+    }
+  }
 }
 
 a:link,
 a:visited,
 a:active {
-  color: #00721e;
+  color: $accent;
   text-decoration: none;
 }
 
 a:hover {
-  color: #004412;
+  color: $accent;
 }
 
 content {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  background-color: #004412;
+  @include flex(row nowrap, center, flex-start);
+  background-color: $accent-dark;
 }
 
-article {
+.products {
   width: 70%;
-  background-color: #ffffff;
-  height: 100vh;
+  background-color: $white;
   display: flex;
-}
 
-.left,
-.right {
-  width: 50%;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
+  &__tile {
+    @include flex(row nowrap, space-evenly);
+    width: 100%;
+  }
+
+  &__left,
+  &__right {
+    width: 50%;
+    @include flex(row nowrap, space-around, center, center, column);
+    display: flex;
+  }
+
+  &__link:link {
+    @include flex(row nowrap, space-evenly);
+    width: 100%;
+  }
+
+  &__link:visited,
+  &__link:hover,
+  &__link:active {
+    color: $black;
+  }
 }
 
 .product {
-  width: 200px;
-}
-
-.tile {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  width: 100%;
-  /* border: #32a852 solid 2px;
-  border-radius: 20px; */
+  width: rem(200);
 }
 
 footer {
-  height: 5vh;
-  border-top: #32a852 solid 5px;
+  padding: rem(20);
+  border-top: rem(5) solid $green;
 }

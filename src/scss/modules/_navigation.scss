@@ -1,0 +1,23 @@
+.navigation {
+  font-size: rem(18);
+
+  @media screen and (min-width: 992px) {
+    font-size: rem(30);
+  }
+
+  &__list {
+    @include flex(row wrap, flex-end);
+  }
+
+  &__item {
+    margin-right: rem(10);
+
+    @media screen and (min-width: 992px) {
+      margin-right: rem(15);
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
