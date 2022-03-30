@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="scss/style.scss" />
+    <title>M-tronics</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="main-header__container">
+        <a href="index.html" class="main-header__link">
+          <img
+            src="images/logo.png"
+            class="main-header__logo"
+            alt="M-tronics"
+          />
+          <h1 class="main-header__logo-h1">-tronics</h1>
+        </a>
+      </div>
+      <nav class="navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="#">Promocje</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#">Placeholder</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#">Kontakt</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <content>
+      <div class="product-page">
+        <figure class="product-page__image">
+          <img src="images/plyta-glowna.jpg" />
+        </figure>
+        <div class="description">
+          <h1 class="description__title">B450 Aorus Pro</h1>
+          <ul class="description__list">
+            <li>Obsługa procesorów AMD Ryzen™</li>
+            <li>Socket AM4</li>
+            <li>
+              Architektura procesora Zen
+              <ul>
+                <li>Zen (1 generacja)</li>
+                <li>Zen + (2 generacja)</li>
+                <li>Zen 2 (3 generacja)</li>
+                <li>Zen 3 (4 generacja)</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </content>
+    <footer>
+      <span>Ilość artykułów na stronie</span>
+      <span id="demo"></span>
+    </footer>
+
+    <script>
+      const articles = document.getElementsByClassName("products__tile").length;
+      console.log(articles);
+      document.getElementById("demo").innerHTML = `${articles}`;
+    </script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

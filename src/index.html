@@ -10,8 +10,14 @@
   <body>
     <header class="main-header">
       <div class="main-header__container">
-        <img src="images/logo.png" class="main-header__logo" alt="M-tronics" />
-        <h1 class="main-header__logo-h1">-tronics</h1>
+        <a href="index.html" class="main-header__link">
+          <img
+            src="images/logo.png"
+            class="main-header__logo"
+            alt="M-tronics"
+          />
+          <h1 class="main-header__logo-h1">-tronics</h1>
+        </a>
       </div>
       <nav class="navigation">
         <ul class="navigation__list">
@@ -31,22 +37,24 @@
     <content>
       <div class="products">
         <div class="products__left">
-          <div class="products__tile">
-            <img
-              src="images/plyta-glowna.jpg"
-              alt="B560M-A PRO board"
-              class="product"
-            />
-            <div>
-              <h2 class="products__title">MSI B560M-A PRO</h2>
-              <ul class="products__list">
-                <li>Socket 1200</li>
-                <li>Chipset B560</li>
-                <li>Wsparcie procesorów Comet Lake i Rocket Lake</li>
-                <li>Format M-ATX</li>
-              </ul>
+          <a href="b550.html" class="products__link">
+            <div class="products__tile">
+              <img
+                src="images/plyta-glowna.jpg"
+                alt="B560M-A PRO board"
+                class="product"
+              />
+              <div>
+                <h2 class="products__title">MSI B560M-A PRO</h2>
+                <ul class="products__list">
+                  <li>Socket 1200</li>
+                  <li>Chipset B560</li>
+                  <li>Wsparcie procesorów Comet Lake i Rocket Lake</li>
+                  <li>Format M-ATX</li>
+                </ul>
+              </div>
             </div>
-          </div>
+          </a>
           <div class="products__tile">
             <img
               src="images/plyta-glowna.jpg"
@@ -164,8 +172,16 @@
         </div>
       </div>
     </content>
-    <footer></footer>
+    <footer>
+      <span>Ilość artykułów na stronie</span>
+      <span id="demo"></span>
+    </footer>
 
+    <script>
+      const articles = document.getElementsByClassName("products__tile").length;
+      console.log(articles);
+      document.getElementById("demo").innerHTML = `${articles}`;
+    </script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
   </body>
