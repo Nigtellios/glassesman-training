@@ -31,6 +31,23 @@
   }
 }
 
+.page {
+  display: flex;
+  @include flex(row nowrap, center, center, center, column);
+}
+
+.main-banner {
+  margin: 0 auto;
+  height: rem(200);
+  width: rem(800);
+  background-color: aquamarine;
+  overflow: hidden;
+  position: relative;
+}
+.main-banner {
+  image: url(images/logo.png);
+}
+
 a:link,
 a:visited,
 a:active {
