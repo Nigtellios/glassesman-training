@@ -1,6 +1,13 @@
+// Color
 $green: #32a852;
 $accent: #00721e;
 $accent-dark: #004412;
 $light-blue: #a2ddff;
 $white: #FFFFFF;
 $black: #000000;
+
+// Gradients
+$green-gradient: linear-gradient(35deg, rgba(0,68,18,1) 0%, rgba(119,253,45,1) 100%);
+
+// Box Shadows
+$shadow-default: 10px 10px 50px -30px rgba(66, 68, 90, 1);
